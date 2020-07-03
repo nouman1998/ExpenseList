@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { pathToFileURL } from 'url';
+import { CheckComponent } from './check/check.component';
 
 const routes: Routes = [
   {
@@ -8,9 +11,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
+  
+ 
+  {path:'main',component:CheckComponent}
 ];
 
 @NgModule({
